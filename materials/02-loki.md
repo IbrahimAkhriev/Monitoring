@@ -1,12 +1,12 @@
 # Loki
 
-Loki is a horizontally scalable, highly available multi-user log aggregation system inspired by Prometheus. Loki is designed to be very cost-effective and easy to use.
+Inspired by Prometheus, Loki is a horizontally scalable, highly available, multi-user log aggregation system. It is designed to be cost-effective and user-friendly.
 
-Loki as well as Prometheus has a client-server architecture with a kernel in Loki that stores the logs of the whole system, and numerous agents - local metrics collectors (promtail) that pass the logs themselves to Loki.
+Like Prometheus, Loki has a client-server architecture. Loki's kernel stores the logs of the entire system, and numerous agents — local metrics collectors (promtail) — pass the logs to Loki.
 
-To get logs from Loki, you need to use a query in a special language - LogQL, similar to PromQL.
+To retrieve logs from Loki, a query in LogQL, a language similar to PromQL, is required.
 
-The standard LogQL query consists of two parts: a selector and a filter. The selector is used to search for labels that index logs in Loki, and the filter is used to select a subset of the logs selected by the selector using a search query or a regular expression.
+A standard LogQL query consists of two parts: a selector and a filter. The selector searches for labels that index logs in Loki, and the filter selects a subset of the logs identified by the selector using a search query or regular expression.
 
 For example:
 

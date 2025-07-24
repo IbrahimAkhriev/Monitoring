@@ -17,9 +17,9 @@ Monitoring tools to track metrics and critical situations.
 
 Application monitoring is an important part of any software development. Monitoring usually involves collecting and visualizing metrics and logs of both the application and the infrastructure in which the application is deployed. 
 
-Metrics are numeric values that show the actual parameters and performance of the application. Logs are text records with important information about the progress of the application.
+**Metrics** are numeric values that show the actual parameters and performance of the application. **Logs** are text records with important information about the progress of the application.
 
-The combination of Prometheus and Grafana is in fact one of the most frequently used solutions for collecting and visualizing metrics in applications and distributed systems. Loki is a Prometheus-inspired tool for collecting textual logs.
+The combination of Prometheus and Grafana is in fact one of the most frequently used solutions for collecting and visualizing metrics in applications and distributed systems. Loki is a tool inspired by Prometheus for collecting textual logs.
 
 ## Chapter II
 
@@ -29,30 +29,30 @@ The result of the work must be a report with detailed descriptions of the implem
 
 In this chapter you will configure Prometheus and Loki to collect metrics and logs for the application.
 
-**== Task ==**
+### Task 
 
-1) Use the docker swarm from the first project. 
+1. Use the Docker Swarm from the first project. 
 
-2) Use the Micrometer library to write the following application metrics collectors: 
+2. Use the Micrometer library to write the following application metrics collectors: 
    - number of messages sent to rabbitmq;
    - number of messages processed in rabbitmq;
    - number of bookings;
    - number of requests received at the gateway;
    - number of user authorization requests received.
 
-3) Add application logs using Loki.
+3. Add application logs using Loki.
 
-4) Create a new stack for the docker swarm of services with Prometheus Server, Loki, node_exporter, blackbox_exporter, cAdvisor. Check receiving metrics on port 9090 via a browser.
+4. Create a new stack for the Docker Swarm of services with Prometheus Server, Loki, node_exporter, blackbox_exporter, cAdvisor. Check receiving metrics on port 9090 via a browser.
 
 ## Part 2. Visualization
 
 In this chapter you will configure Grafana to visualize metrics and logs.
 
-**== Task ==**
+### Task
 
-1) Deploy grafana as a new service in the monitoring stack.
+1. Deploy Grafana as a new service in the monitoring stack.
 
-2) Add a dashboard with the following metrics to grafana:
+2. Add a dashboard with the following metrics to Grafana:
    - number of nodes;
    - number of containers;
    - number of stacks;
@@ -73,13 +73,13 @@ In this chapter you will configure Grafana to visualize metrics and logs.
 
 In this chapter you will configure the Alert Manager to alert you about critical events.
 
-**== Task ==**
+### Task 
 
-1) Deploy alert manager as a new service in the monitored stack.
+1. Deploy Alert Manager as a new service in the monitored stack.
 
-2) Add the following critical events:
-   - available memory is less than 100 mb;
-   - spent RAM is more than 1gb;
+2. Add the following critical events:
+   - available memory is less than 100 MB;
+   - used RAM is more than 1 GB;
    - CPU usage for the service exceeds 10%.
 
-3) Configure notifications via personal email and Telegram.
+3. Configure notifications via personal email and Telegram.
